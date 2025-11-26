@@ -43,7 +43,7 @@
                             <li><a class="dropdown-item" href="{{ route('perfil.edit') }}">Mi perfil</a></li>
                         </ul>
                     @else
-                        <a class="nav-link nav-btn" href="{{ route('login') }}">Iniciar sesión</a>
+                        <a class="nav-link nav-btn" href="{{ route('login') }}">INICIAR SESIÓN</a>
                     @endauth
                 </li>
 
