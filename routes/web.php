@@ -1,17 +1,19 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\PerfilController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\ProductoController;
-use App\Http\Controllers\WebController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebController::class, 'index'])->name('web.index');
 Route::get('/producto/{id}', [WebController::class, 'show'])->name('web.show');
@@ -33,9 +35,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/perfil/pedidos', [PedidoController::class, 'index'])->name('perfil.pedidos');
     Route::patch('/pedidos/{id}/estado', [PedidoController::class, 'cambiarEstado'])->name('pedidos.cambiar.estado');    
 
-    Route::get('dashboard', function(){
-        return view('dashboard');
-    })->name('dashboard');
+   Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::post('logout', function(){
         Auth::logout();
