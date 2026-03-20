@@ -24,39 +24,69 @@
   {{-- AdminLTE --}}
   <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}" />
 
-  <style>
-    /* ── Variables de marca ── */
-    :root {
-      --gold:        #D4AF37;
-      --gold-light:  #f0d875;
-      --gold-dim:    rgba(212,175,55,0.15);
-      --gold-border: rgba(212,175,55,0.25);
-      --dark-bg:     #0f0c08;
-      --dark-surface:#1a1510;
-      --dark-muted:  rgba(245,232,192,0.45);
-      --cream:       #f5e8c0;
-      --font-display:'Cormorant Garamond', Georgia, serif;
-      --font-body:   'DM Sans', system-ui, sans-serif;
-    }
+<style>
+  /* ── Variables de marca ── */
+  :root {
+    --gold:        #D4AF37;
+    --gold-light:  #f0d875;
+    --gold-dim:    rgba(212,175,55,0.15);
+    --gold-border: rgba(212,175,55,0.25);
+    --dark-bg:     #0f0c08;
+    --dark-surface:#1a1510;
+    --dark-muted:  rgba(245,232,192,0.45);
+    --cream:       #f5e8c0;
+    --font-display:'Cormorant Garamond', Georgia, serif;
+    --font-body:   'DM Sans', system-ui, sans-serif;
+  }
 
-    body { font-family: var(--font-body); }
+  /* ── Tamaño base ── */
+  html { font-size: 15px; }
+  body { font-family: var(--font-body); }
 
-    /* ── Footer ── */
-    .app-footer {
-      background: var(--dark-bg) !important;
-      border-top: 1px solid var(--gold-border);
-      color: var(--dark-muted);
-      font-size: 13px;
-    }
-    .app-footer a {
-      color: var(--gold) !important;
-      text-decoration: none;
-    }
-    .app-footer a:hover { color: var(--gold-light) !important; }
+  /* ── Escala de componentes ── */
+  .jw-table td           { font-size: 14px; }
+  .jw-table th           { font-size: 11px; }
+  .jw-label              { font-size: 13px; }
+  .jw-input,
+  .jw-select             { font-size: 14px; }
+  .jw-btn                { font-size: 13px; }
+  .jw-kpi-label          { font-size: 12px; }
+  .jw-kpi-value          { font-size: 30px; }
+  .jw-section-title      { font-size: 22px; }
+  .jw-card-title         { font-size: 22px; }
+  .jw-search-form input  { font-size: 14px; }
+  .jw-search-form button { font-size: 14px; }
+  .jw-nav-section-label  { font-size: 10px; }
+  .sidebar-menu .nav-link{ font-size: 14px !important; }
+  .jw-brand-name         { font-size: 19px; }
+  .jw-order-name         { font-size: 14px; }
+  .jw-order-client       { font-size: 12px; }
+  .jw-badge-status       { font-size: 11px; }
+  .jw-role-badge,
+  .jw-perm-badge         { font-size: 11px; }
+  .jw-email              { font-size: 13px; }
+  .jw-user-name          { font-size: 14px; }
+  .jw-product-name       { font-size: 14px; }
+  .jw-precio             { font-size: 16px; }
+  .jw-welcome-title      { font-size: 28px; }
+  .jw-welcome-sub        { font-size: 14px; }
 
-    /* ── Scrollbar ── */
-    .sidebar-wrapper { scrollbar-color: var(--gold-border) transparent; }
-  </style>
+  /* ── Footer ── */
+  .app-footer {
+    background: var(--dark-bg) !important;
+    border-top: 1px solid var(--gold-border);
+    color: var(--dark-muted);
+    font-size: 13px;
+  }
+  .app-footer a {
+    color: var(--gold) !important;
+    text-decoration: none;
+  }
+  .app-footer a:hover { color: var(--gold-light) !important; }
+
+  /* ── Scrollbar ── */
+  .sidebar-wrapper { scrollbar-color: var(--gold-border) transparent; }
+</style>
 
   @stack('estilos')
 </head>
@@ -80,9 +110,9 @@
     </div>
     <strong>
       Copyright &copy; {{ date('Y') }}&nbsp;
-      <a href="#">ArtCode</a>.
+      <a href="#">JOYEROSNTE</a>.
     </strong>
-    All rights reserved.
+    Todos los derechos reservados.
   </footer>
 
 </div>
