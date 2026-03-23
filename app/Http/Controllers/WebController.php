@@ -40,4 +40,27 @@ class WebController extends Controller
         // Pasar el producto a la vista
         return view('web.item', compact('producto'));
     }
+
+    public function nosotros(){
+        return view('web.nosotros');
+    }
+
+    public function contacto(){
+        return view('web.contacto');
+    }
+
+    public function enviarContacto(Request $request){
+        $request->validate([
+            'nombre'  => 'required|string|max:100',
+            'email'   => 'required|email|max:150',
+            'telefono'=> 'nullable|string|max:30',
+            'asunto'  => 'required|string',
+            'mensaje' => 'required|string|min:10|max:2000',
+        ]);
+
+        // Aquí puedes enviar el email con Mail::to(...)->send(...)
+        // Por ahora simplemente devolvemos con mensaje de éxito
+        return redirect()->route('web.contacto')
+                         ->with('success', '¡Mensaje enviado con éxito! Te responderemos pronto.');
+    }
 }

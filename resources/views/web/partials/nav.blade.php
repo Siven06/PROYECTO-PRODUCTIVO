@@ -288,10 +288,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nosotros</a>
+          <a class="nav-link {{ request()->routeIs('web.nosotros') ? 'active' : '' }}"
+             href="{{ route('web.nosotros') }}">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link {{ request()->routeIs('web.contacto') ? 'active' : '' }}"
+             href="{{ route('web.contacto') }}">Contacto</a>
         </li>
 
         @auth

@@ -566,10 +566,15 @@
       {{-- Imagen decorativa derecha --}}
       <div class="col-lg-5 offset-lg-1 d-none d-lg-block">
         <div class="jn-hero-img-wrap">
-          {{-- Reemplaza con una imagen real de tus productos --}}
-          <div style="width:100%;max-width:420px;aspect-ratio:3/4;background:linear-gradient(135deg,#1a1408,#2a1f08);border:1px solid rgba(212,175,55,0.25);border-radius:2px;display:flex;align-items:center;justify-content:center;">
-            <i class="bi bi-gem" style="font-size:80px;color:rgba(212,175,55,0.2);"></i>
-          </div>
+          @if($productos->isNotEmpty())
+            <img src="{{ asset('uploads/productos/' . $productos->first()->imagen) }}"
+                class="jn-hero-img"
+                alt="{{ $productos->first()->nombre }}">
+          @else
+            <div style="width:100%;max-width:420px;aspect-ratio:3/4;background:linear-gradient(135deg,#1a1408,#2a1f08);border:1px solid rgba(212,175,55,0.25);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+              <i class="bi bi-gem" style="font-size:80px;color:rgba(212,175,55,0.2);"></i>
+            </div>
+          @endif
           <div class="jn-hero-img-frame"></div>
           <div class="jn-hero-badge">
             <div class="jn-hero-badge-icon">
