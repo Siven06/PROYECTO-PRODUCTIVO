@@ -381,6 +381,9 @@
         <a href="{{ route('login') }}" class="jn-login">
           <i class="bi bi-person"></i> Ingresar
         </a>
+        <a href="{{ route('registro') }}" class="jn-cta">
+          <i class="bi bi-gem"></i> Registrarse
+        </a>
         @endauth
 
       </div>

@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="title" content="Shop | ArtCode.com" />
         <meta name="author" content="ArtCode" />
-        <meta name="description" content="Shop | ArtCode.com"/>
-        <meta name="keywords" content="Shop, ArtCode"
+        <meta name="description" content="Shop | Joyeros del Norte" />
+        <meta name="keywords" content="Shop, Joyeros, Norte, ArtCode, Ecommerce"
         />
         <title>@yield('titulo', 'JOYEROS DEL NORTE')</title>
         <!-- Favicon-->
